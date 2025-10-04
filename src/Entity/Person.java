@@ -1,9 +1,11 @@
 package Entity;
 
+import java.util.Objects;
+
 public class Person {
-    private String name;
-    private String surname;
-    private Genre genre;
+    protected final String name;
+    protected final String surname;
+    protected final Genre genre;
 
     public Person(String name, String surname, Genre genre) {
         this.name = name;
@@ -21,5 +23,17 @@ public class Person {
 
     public Genre getGenre() {
         return genre;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(name, person.name) && Objects.equals(surname, person.surname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname);
     }
 }
