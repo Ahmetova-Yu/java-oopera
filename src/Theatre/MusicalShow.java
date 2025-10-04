@@ -1,22 +1,25 @@
 package Theatre;
 
 import Entity.Actor;
+import Entity.Person;
+import Entity.Director;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class MusicalShow extends Show{
-    protected final String musicAuthor;
+    protected final Person musicAuthor;
     protected final String librettoText;
 
-    public MusicalShow(String title, int duration, String director,
-                       ArrayList<Actor> listOfActors, String musicAuthor, String librettoText) {
+    public MusicalShow(String title, int duration, Director director,
+                       ArrayList<Actor> listOfActors, Person musicAuthor, String librettoText) {
 
         super(title, duration, director, listOfActors);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
     }
 
-    public String getMusicAuthor() {
+    public Person getMusicAuthor() {
         return musicAuthor;
     }
 

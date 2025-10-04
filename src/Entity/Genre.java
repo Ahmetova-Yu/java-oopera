@@ -1,6 +1,6 @@
 package Entity;
 
 public enum Genre {
-    Male,
+    MALE,
     FEMALE
 }
