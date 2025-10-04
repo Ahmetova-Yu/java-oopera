@@ -1,5 +1,7 @@
 package Theatre;
 
+import Entity.Actor;
+
 import java.util.ArrayList;
 
 public class Show {
